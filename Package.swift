@@ -23,3 +23,10 @@ package.targets += [
 	.target(name: "_Extensions", dependencies: []),
 	.testTarget(name: "_ExtensionsTest", dependencies: ["_Extensions"]),
 ]
+
+// MARK: - Target - _Support
+
+package.targets += [
+	.target(name: "_Support", dependencies: []),
+	.testTarget(name: "_SupportTest", dependencies: ["_Support"]),
+]
