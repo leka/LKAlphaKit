@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "LKAlphaComSpecs",
+        "repositoryURL": "https://github.com/leka/LKAlphaComSpecs",
+        "state": {
+          "branch": null,
+          "revision": "381046f2d8bb26c5337e3f562c9717a9c5b62bea",
+          "version": "3.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
