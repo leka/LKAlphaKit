@@ -7,7 +7,7 @@ let package = Package(
     name: "LKAlphaKit",
     products: [
         .library(name: "LKAlphaKit", targets: ["LKAlphaKit"]),
-		.library(name: "LKLedKit", targets: ["LKLedKit"]),
+		.library(name: "LKLightKit", targets: ["LKLightKit"]),
     ],
 
 	dependencies: [
@@ -29,11 +29,11 @@ package.targets += [
 	.testTarget(name: "LKIOKitTests", dependencies: ["LKIOKit"]),
 ]
 
-// MARK: - Target - LKLedKit
+// MARK: - Target - LKLightKit
 
 package.targets += [
-	.target(name: "LKLedKit", dependencies: ["LKAlphaComSpecs", "LKIOKit"]),
-	.testTarget(name: "LKLedKitTests", dependencies: ["LKLedKit"]),
+	.target(name: "LKLightKit", dependencies: ["LKAlphaComSpecs", "LKIOKit"]),
+	.testTarget(name: "LKLightKitTests", dependencies: ["LKLightKit"]),
 ]
 
 // MARK: - Target - LKSupport
