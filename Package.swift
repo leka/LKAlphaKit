@@ -7,6 +7,7 @@ let package = Package(
     name: "LKAlphaKit",
     products: [
         .library(name: "LKAlphaKit", targets: ["LKAlphaKit"]),
+		.library(name: "LKLedKit", targets: ["LKLedKit"]),
     ],
 
 	dependencies: [
@@ -21,23 +22,27 @@ package.targets += [
 	.testTarget(name: "LKAlphaKitTests", dependencies: ["LKAlphaKit"]),
 ]
 
+// MARK: - Target - LKIOKit
+
+package.targets += [
+	.target(name: "LKIOKit", dependencies: ["LKAlphaComSpecs", "LKSupport"]),
+	.testTarget(name: "LKIOKitTests", dependencies: ["LKIOKit"]),
+]
+
 // MARK: - Target - LKLedKit
 
 package.targets += [
-	.target(name: "LKLedKit", dependencies: ["LKAlphaComSpecs"]),
+	.target(name: "LKLedKit", dependencies: ["LKAlphaComSpecs", "LKIOKit"]),
 	.testTarget(name: "LKLedKitTests", dependencies: ["LKLedKit"]),
 ]
 
-// MARK: - Target - _Extensions
+// MARK: - Target - LKSupport
 
 package.targets += [
-	.target(name: "_Extensions", dependencies: []),
-	.testTarget(name: "_ExtensionsTests", dependencies: ["_Extensions"]),
+	.target(name: "LKSupport", dependencies: []),
+	.testTarget(name: "LKSupportTests", dependencies: ["LKSupport"]),
 ]
 
-// MARK: - Target - _Support
+// MARK: - Swift Version
 
-package.targets += [
-	.target(name: "_Support", dependencies: []),
-	.testTarget(name: "_SupportTests", dependencies: ["_Support"]),
-]
+package.swiftLanguageVersions = [.v4, .v4_2]

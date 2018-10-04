@@ -8,7 +8,7 @@
 import Foundation
 import XCTest
 
-@testable import _Support
+@testable import LKSupport
 
 class HelpersTests_string2uint8: XCTestCase {
 

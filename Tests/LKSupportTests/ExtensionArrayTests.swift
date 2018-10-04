@@ -8,7 +8,7 @@
 import Foundation
 import XCTest
 
-@testable import _Extensions
+@testable import LKSupport
 
 class ExtensionArrayTest: XCTestCase {
 
