@@ -8,6 +8,7 @@ let package = Package(
     products: [
         .library(name: "LKAlphaKit", targets: ["LKAlphaKit"]),
 		.library(name: "LKLightKit", targets: ["LKLightKit"]),
+		.library(name: "ORSSerialPort", targets: ["ORSSerialPort"])
     ],
 
 	dependencies: [
@@ -41,6 +42,12 @@ package.targets += [
 package.targets += [
 	.target(name: "LKSupport", dependencies: []),
 	.testTarget(name: "LKSupportTests", dependencies: ["LKSupport"]),
+]
+
+// MARK: - Target - Libraries
+
+package.targets += [
+	.target(name: "ORSSerialPort", dependencies: [], path: "Libraries/ORSSerialPort"),
 ]
 
 // MARK: - Swift Version
